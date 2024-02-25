@@ -1,16 +1,25 @@
-import { Hero, Chips } from 'ui-complib';
+import { HashRouter as Router, Route, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Dashboard from './pages/dashboard/Dashboard';
+import Error from './pages/error/Error';
 
 import './App.css';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: Dashboard
+  },
+  {
+    path: '*',
+    Component: Error
+  }
+]);
 
 function App() {
 
   return (
     <>
-      <Hero title="We invest in the world’s potential" description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." links={[{ type: 'primary', text: 'Learn more', postfixIcon: 'right-arrow' }]} />
-      <hr />
-      <Chips />
-      <hr />
-      <Hero title="We invest in the world’s potential" description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." />
+      <RouterProvider router={router} />
     </>
   )
 }
