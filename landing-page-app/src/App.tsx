@@ -6,11 +6,11 @@ function App() {
 
   return (
     <>
-      <Hero type='image' />
+      <Hero title="We invest in the world’s potential" description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." links={[{ type: 'primary', text: 'Learn more', postfixIcon: 'right-arrow' }]} />
       <hr />
       <Chips />
       <hr />
-      <Hero type='default' />
+      <Hero title="We invest in the world’s potential" description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth." />
     </>
   )
 }
